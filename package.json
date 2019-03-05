@@ -7,7 +7,6 @@
     "install": "cd server && npm install && cd ../client && npm install",
     "client": "cd client && npm start",
     "server": "cd server && npm run start",
-    "trial": "cd server && node scantext.js && node keywords.js",
     "start": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
