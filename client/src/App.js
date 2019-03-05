@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount(){
     
-    fetch("http://51.145.4.86:5000/api").then(res => res.json()).then(jsonString => {
+    fetch("http://51.141.229.78:5000/api").then(res => res.json()).then(jsonString => {
       this.setState({
         words: jsonString.word
       });
