@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "installFolder": "npm install && cd server && npm install && npm run client-install",
-    "build-server": "cd server && npm run server &",
-    "build-client": " cd client && npm run start &"
+    "install": "cd server && npm install && cd .. && cd client && npm install",
+    "client": "cd client && npm start",
+    "server": "cd server && npm run start",
+    "trial": "cd server && node scantext.js && node keywords.js",
+    "start": "concurrently \"npm run server\" \"npm run client\" \"cd server && node ConvertToTxt.js\" \"npm run trial\" "
   },
   "repository": {
     "type": "git",
